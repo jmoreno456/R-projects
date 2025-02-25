@@ -1,0 +1,16 @@
+# create s4 class method
+setClass("House", slots = list(color = "character", bedrooms = "numeric", 
+                               bathrooms = "numeric", sqft = "numeric"))
+
+future_house <- new("House", color = "White", bedrooms = 4, bathrooms = 2,
+                    sqft = 2500)
+
+setMethod("show", "House", function(object) {
+  cat("What is the color of the house:", object@color, "\n")
+  cat("How many bedrooms are there:", object@bedrooms, "\n")
+  cat("How many bathrooms does it have:", object@bathrooms, "\n")
+  cat("What is the square footage(square feet):", object@sqft, "\n")
+})
+
+# print class
+print(future_house)
