@@ -1,0 +1,15 @@
+# create class for S3 method
+h <- list(color = "White", bedrooms = 4, bathrooms = 2, sqft = 2500)
+class(h) <- "house"
+attributes(h)
+
+# create print method
+print.house <- function(obj) {
+  cat("What color is the house:", obj$color, "\n")
+  cat("How many bedrooms:", obj$bedrooms, "\n")
+  cat("How many bathrooms:", obj$bathrooms, "\n")
+  cat("What is the square footage(square feet):", obj$sqft, "\n")
+}
+
+# print class
+print(h)
